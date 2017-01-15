@@ -1,0 +1,17 @@
+$animation-duration-slide: 700ms;
+$animation-duration-fade: 600ms;
+$animation-duration-flip: 1000ms;
+$animation-duration-zoom: 400ms;
+$animation-duration-pulse: 400ms;
+$animation-duration-bounce: 800ms;
+
+@import "slide";
+@import "fade";
+@import "zoom";
+@import "pulse";
+@import "flip";
+@import "bounce";
+
+.forever {
+    animation-iteration-count:infinite;
+}

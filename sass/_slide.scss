@@ -1,0 +1,110 @@
+@keyframes slide-up-in {
+	from { 
+        transform: translateY(100%);
+    }
+	to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up-out {
+	from { 
+        transform: translateY(0);
+    }
+	to { 
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-down-in {
+	from { 
+        transform: translateY(0);
+    }
+	to { 
+        transform: translateY(100%); 
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down-out {
+	from { 
+        transform: translateY(0);
+    }
+	to { 
+        transform: translateY(100%); 
+        opacity: 0;
+    }
+}
+
+@keyframes slide-left-in {
+	from { 
+        transform: translateX(-100%);
+    }
+	to { 
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left-out {
+	from { 
+        transform: translateX(0);
+    }
+	to { 
+        transform: translateX(-100%); 
+        opacity: 0;
+    }
+}
+
+@keyframes slide-right-in {
+	from { 
+        transform: translateX(100%);
+    }
+	to { 
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right-out {
+	from { 
+        transform: translateX(0);
+    }
+	to { 
+        transform: translateX(100%); 
+        opacity: 0;
+    }
+}
+
+.slide {
+    will-change: transform;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: $animation-duration-slide;
+
+    &-in {
+        opacity: 0;
+    }
+    &-out {
+        opacity: 1;
+    }
+
+    &-up {
+        &-in { animation-name: slide-up-in; }
+        &-out { animation-name: slide-up-out; }
+    }
+    &-down {
+        &-in { animation-name: slide-down-in; }
+        &-out { animation-name: slide-down-out; }
+    }
+    &-left {
+        &-in { animation-name: slide-left-in; }
+        &-out { animation-name: slide-left-out; }
+    }
+    &-right {
+        &-in { animation-name: slide-right-in; }
+        &-out { animation-name: slide-right-out; }
+    }
+}

@@ -1,0 +1,72 @@
+@keyframes zoom-in {
+	from { 
+        transform: scale(0);
+    }
+	to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in-radial {
+	from { 
+        transform: scale(0);
+        border-radius: 100%;
+    }
+	to { 
+        transform: scale(1);
+        border-radius: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-out {
+	from { 
+        transform: scale(1);
+    }
+	to { 
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes zoom-out-radial {
+	from { 
+        transform: scale(1);
+        border-radius:100%;
+    }
+	to { 
+        transform: scale(0);
+        opacity: 0;
+        border-radius:0;
+    }
+}
+
+.zoom {
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: $animation-duration-zoom;
+
+    &-in {
+        opacity: 0;
+        animation-name: zoom-in;
+        will-change: transform, opacity;
+
+        &-radial {
+            will-change: transform, opacity, border-radius;
+            animation-name: zoom-in-radial;
+            border-radius:100%;
+        }
+    }
+    &-out {
+        opacity: 1;
+        animation-name: zoom-out;
+        will-change: transform, opacity;
+        
+        &-radial {
+            will-change: transform, opacity, border-radius;
+            animation-name: zoom-out-radial;
+            border-radius:0;
+        }
+    }
+}

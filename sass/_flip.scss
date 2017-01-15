@@ -1,0 +1,63 @@
+@keyframes flip-x-in {
+	from {
+        transform: rotateX(90deg);
+    }
+    to {
+        transform: none;
+    }
+}
+@keyframes flip-x-out {
+	from {
+        transform: none;
+    }
+    to {
+        transform: rotateX(90deg);
+    }
+}
+@keyframes flip-y-in {
+	from {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: none;
+    }
+}
+@keyframes flip-y-out {
+	from {
+        transform: none;
+    }
+    to {
+        transform: rotateY(90deg);
+    }
+}
+
+.flip {
+    will-change: transform;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: $animation-duration-flip;
+
+    &-top {
+        transform-origin: top;
+        &-in {animation-name: flip-x-in;}
+        &-out {animation-name: flip-x-out;}
+    }
+    
+    &-bottom {
+        transform-origin: bottom;
+        &-in {animation-name: flip-x-in;}
+        &-out {animation-name: flip-x-out;}
+    }
+    
+    &-left {
+        transform-origin: left;
+        &-in {animation-name: flip-y-in;}
+        &-out {animation-name: flip-y-out;}
+    }
+    
+    &-right {
+        transform-origin: right;
+        &-in {animation-name: flip-y-in;}
+        &-out {animation-name: flip-y-out;}
+    }
+}
