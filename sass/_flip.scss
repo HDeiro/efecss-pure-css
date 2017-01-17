@@ -31,33 +31,73 @@
     }
 }
 
-.flip {
+%flip {
     will-change: transform;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: $animation-duration-flip;
+}
 
+%flip-top {
+    @extend %flip;
+    transform-origin: top;
+}
+
+%flip-bottom {
+    @extend %flip;
+    transform-origin: bottom;
+}
+
+%flip-left {
+    transform-origin: left;
+}
+
+%flip-right {
+    transform-origin: right;
+}
+
+.flip {
     &-top {
-        transform-origin: top;
-        &-in {animation-name: flip-x-in;}
-        &-out {animation-name: flip-x-out;}
+        &-in {
+            @extend %flip-top;
+            animation-name: flip-x-in;
+        }
+        &-out {
+            @extend %flip-top;
+            animation-name: flip-x-out;
+        }
     }
     
     &-bottom {
-        transform-origin: bottom;
-        &-in {animation-name: flip-x-in;}
-        &-out {animation-name: flip-x-out;}
+        &-in {
+            @extend %flip-bottom;
+            animation-name: flip-x-in;
+        }
+        &-out {
+            @extend %flip-bottom;
+            animation-name: flip-x-out;
+        }
     }
     
     &-left {
-        transform-origin: left;
-        &-in {animation-name: flip-y-in;}
-        &-out {animation-name: flip-y-out;}
+        &-in {
+            @extend %flip-left;
+            animation-name: flip-y-in;
+        }
+        &-out {
+            @extend %flip-left;
+            animation-name: flip-y-out;
+        }
     }
     
     &-right {
-        transform-origin: right;
-        &-in {animation-name: flip-y-in;}
-        &-out {animation-name: flip-y-out;}
+        &-in {
+            @extend %flip-right;
+            animation-name: flip-y-in;
+        }
+        &-out {
+            @extend %flip-right;
+            animation-name: flip-y-out;
+        }
     }
 }

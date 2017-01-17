@@ -31,13 +31,18 @@
     }
 }
 
-.bounce {
+%bounce {
     will-change: transform;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: $animation-duration-bounce;
+}
 
+.bounce {
     &-top {
-        &-in { animation-name: bounce-top-in; }
+        &-in { 
+            @extend %bounce;
+            animation-name: bounce-top-in; 
+        }
     }
 }

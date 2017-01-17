@@ -16,16 +16,20 @@
     }
 }
 
-.fade {
+%fade {
     will-change: opacity;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: $animation-duration-fade;
+}
 
+.fade {
     &-in {
+        @extend %fade;
         animation-name: fade-in;
     }
     &-out {
+        @extend %fade;
         animation-name: fade-out;
     }
 }
