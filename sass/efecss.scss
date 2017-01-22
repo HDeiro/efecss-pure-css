@@ -15,3 +15,9 @@ $animation-duration-bounce: 800ms;
 .forever {
     animation-iteration-count:infinite;
 }
+
+@for $i from 0 through 10 {
+  .wait-for-#{$i * 200}ms {
+      animation-delay: $i * 200ms;
+  }
+}
