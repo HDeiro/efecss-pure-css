@@ -12,15 +12,15 @@
     opacity: 0; } }
 @keyframes slide-down-in {
   from {
-    transform: translateY(0); }
+    transform: translateY(-100%); }
   to {
-    transform: translateY(100%);
+    transform: translateY(0);
     opacity: 1; } }
 @keyframes slide-down-out {
   from {
     transform: translateY(0); }
   to {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     opacity: 0; } }
 @keyframes slide-left-in {
   from {
@@ -46,31 +46,34 @@
   to {
     transform: translateX(100%);
     opacity: 0; } }
-.slide {
+.slide-up-in, .slide-down-in, .slide-left-in, .slide-right-in, .slide-up-out, .slide-down-out, .slide-left-out, .slide-right-out {
   will-change: transform;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 700ms; }
-  .slide-in {
-    opacity: 0; }
-  .slide-out {
-    opacity: 1; }
-  .slide-up-in {
-    animation-name: slide-up-in; }
-  .slide-up-out {
-    animation-name: slide-up-out; }
-  .slide-down-in {
-    animation-name: slide-down-in; }
-  .slide-down-out {
-    animation-name: slide-down-out; }
-  .slide-left-in {
-    animation-name: slide-left-in; }
-  .slide-left-out {
-    animation-name: slide-left-out; }
-  .slide-right-in {
-    animation-name: slide-right-in; }
-  .slide-right-out {
-    animation-name: slide-right-out; }
+
+.slide-up-in, .slide-down-in, .slide-left-in, .slide-right-in {
+  opacity: 0; }
+
+.slide-up-out, .slide-down-out, .slide-left-out, .slide-right-out {
+  opacity: 1; }
+
+.slide-up-in {
+  animation-name: slide-up-in; }
+.slide-up-out {
+  animation-name: slide-up-out; }
+.slide-down-in {
+  animation-name: slide-down-in; }
+.slide-down-out {
+  animation-name: slide-down-out; }
+.slide-left-in {
+  animation-name: slide-left-in; }
+.slide-left-out {
+  animation-name: slide-left-out; }
+.slide-right-in {
+  animation-name: slide-right-in; }
+.slide-right-out {
+  animation-name: slide-right-out; }
 
 @keyframes fade-in {
   from {
@@ -82,15 +85,16 @@
     opacity: 1; }
   to {
     opacity: 0; } }
-.fade {
+.fade-in, .fade-out {
   will-change: opacity;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 600ms; }
-  .fade-in {
-    animation-name: fade-in; }
-  .fade-out {
-    animation-name: fade-out; }
+
+.fade-in {
+  animation-name: fade-in; }
+.fade-out {
+  animation-name: fade-out; }
 
 @keyframes zoom-in {
   from {
@@ -120,26 +124,34 @@
     transform: scale(0);
     opacity: 0;
     border-radius: 0; } }
-.zoom {
+.zoom-in-radial, .zoom-in {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 400ms; }
-  .zoom-in {
-    opacity: 0;
-    animation-name: zoom-in;
-    will-change: transform, opacity; }
-    .zoom-in-radial {
-      will-change: transform, opacity, border-radius;
-      animation-name: zoom-in-radial;
-      border-radius: 100%; }
-  .zoom-out {
-    opacity: 1;
-    animation-name: zoom-out;
-    will-change: transform, opacity; }
-    .zoom-out-radial {
-      will-change: transform, opacity, border-radius;
-      animation-name: zoom-out-radial;
-      border-radius: 0; }
+
+.zoom-in-radial, .zoom-in {
+  opacity: 0;
+  will-change: transform, opacity; }
+
+.zoom-in-radial {
+  will-change: transform, opacity, border-radius;
+  border-radius: 100%; }
+
+.zoom-out-radial, .zoom-out {
+  will-change: transform, opacity;
+  opacity: 1; }
+
+.zoom-out-radial {
+  will-change: transform, opacity, border-radius; }
+
+.zoom-in {
+  animation-name: zoom-in; }
+  .zoom-in-radial {
+    animation-name: zoom-in-radial; }
+.zoom-out {
+  animation-name: zoom-out; }
+  .zoom-out-radial {
+    animation-name: zoom-out-radial; }
 
 @keyframes pulse {
   0% {
@@ -175,35 +187,40 @@
     transform: none; }
   to {
     transform: rotateY(90deg); } }
-.flip {
+.flip-top-in, .flip-top-out, .flip-bottom-in, .flip-bottom-out {
   will-change: transform;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 1000ms; }
-  .flip-top {
-    transform-origin: top; }
-    .flip-top-in {
-      animation-name: flip-x-in; }
-    .flip-top-out {
-      animation-name: flip-x-out; }
-  .flip-bottom {
-    transform-origin: bottom; }
-    .flip-bottom-in {
-      animation-name: flip-x-in; }
-    .flip-bottom-out {
-      animation-name: flip-x-out; }
-  .flip-left {
-    transform-origin: left; }
-    .flip-left-in {
-      animation-name: flip-y-in; }
-    .flip-left-out {
-      animation-name: flip-y-out; }
-  .flip-right {
-    transform-origin: right; }
-    .flip-right-in {
-      animation-name: flip-y-in; }
-    .flip-right-out {
-      animation-name: flip-y-out; }
+
+.flip-top-in, .flip-top-out {
+  transform-origin: top; }
+
+.flip-bottom-in, .flip-bottom-out {
+  transform-origin: bottom; }
+
+.flip-left-in, .flip-left-out {
+  transform-origin: left; }
+
+.flip-right-in, .flip-right-out {
+  transform-origin: right; }
+
+.flip-top-in {
+  animation-name: flip-x-in; }
+.flip-top-out {
+  animation-name: flip-x-out; }
+.flip-bottom-in {
+  animation-name: flip-x-in; }
+.flip-bottom-out {
+  animation-name: flip-x-out; }
+.flip-left-in {
+  animation-name: flip-y-in; }
+.flip-left-out {
+  animation-name: flip-y-out; }
+.flip-right-in {
+  animation-name: flip-y-in; }
+.flip-right-out {
+  animation-name: flip-y-out; }
 
 @keyframes bounce-top-in {
   0% {
@@ -226,15 +243,16 @@
     transform: translateY(-5%); }
   100% {
     transform: translateY(0); } }
-.bounce {
+.bounce-top-in {
   will-change: transform;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 800ms; }
-  .bounce-top-in {
-    animation-name: bounce-top-in; }
+
+.bounce-top-in {
+  animation-name: bounce-top-in; }
 
 .forever {
   animation-iteration-count: infinite; }
 
-/*# sourceMappingURL=animations.css.map */
+/*# sourceMappingURL=efecss.css.map */

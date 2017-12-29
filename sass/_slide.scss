@@ -20,10 +20,10 @@
 
 @keyframes slide-down-in {
 	from { 
-        transform: translateY(0);
+        transform: translateY(-100%);
     }
 	to { 
-        transform: translateY(100%); 
+        transform: translateY(0); 
         opacity: 1;
     }
 }
@@ -33,7 +33,7 @@
         transform: translateY(0);
     }
 	to { 
-        transform: translateY(100%); 
+        transform: translateY(-100%); 
         opacity: 0;
     }
 }
@@ -78,33 +78,62 @@
     }
 }
 
-.slide {
+%slide {
     will-change: transform;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: $animation-duration-slide;
+}
 
-    &-in {
-        opacity: 0;
-    }
-    &-out {
-        opacity: 1;
-    }
+%slide-in {
+    @extend %slide;
+    opacity: 0;
+}
 
+%slide-out {
+    @extend %slide;
+    opacity: 1;
+}
+
+.slide {
     &-up {
-        &-in { animation-name: slide-up-in; }
-        &-out { animation-name: slide-up-out; }
+        &-in { 
+            @extend %slide-in;
+            animation-name: slide-up-in; 
+        }
+        &-out { 
+            @extend %slide-out;
+            animation-name: slide-up-out; 
+        }
     }
     &-down {
-        &-in { animation-name: slide-down-in; }
-        &-out { animation-name: slide-down-out; }
+        &-in { 
+            @extend %slide-in;
+            animation-name: slide-down-in; 
+        }
+        &-out { 
+            @extend %slide-out;
+            animation-name: slide-down-out; 
+        }
     }
     &-left {
-        &-in { animation-name: slide-left-in; }
-        &-out { animation-name: slide-left-out; }
+        &-in { 
+            @extend %slide-in;
+            animation-name: slide-left-in; 
+        }
+        &-out { 
+            @extend %slide-out;
+            animation-name: slide-left-out; 
+        }
     }
     &-right {
-        &-in { animation-name: slide-right-in; }
-        &-out { animation-name: slide-right-out; }
+        &-in { 
+            @extend %slide-in;
+            animation-name: slide-right-in; 
+        }
+        &-out { 
+            @extend %slide-out;
+            animation-name: slide-right-out; 
+        }
     }
 }

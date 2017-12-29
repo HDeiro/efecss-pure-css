@@ -42,31 +42,51 @@
     }
 }
 
-.zoom {
+%zoom {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: $animation-duration-zoom;
+}
 
+%zoom-in {
+    @extend %zoom;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+%zoom-in-radial {
+    @extend %zoom-in;
+    will-change: transform, opacity, border-radius;
+    border-radius:100%;
+}
+
+%zoom-out {
+    will-change: transform, opacity;
+    opacity: 1;
+}
+
+%zoom-out-radial {
+    @extend %zoom-out;
+    will-change: transform, opacity, border-radius;
+}
+
+.zoom {
     &-in {
-        opacity: 0;
+        @extend %zoom-in;
         animation-name: zoom-in;
-        will-change: transform, opacity;
 
         &-radial {
-            will-change: transform, opacity, border-radius;
+            @extend %zoom-in-radial;
             animation-name: zoom-in-radial;
-            border-radius:100%;
         }
     }
     &-out {
-        opacity: 1;
+        @extend %zoom-out;                
         animation-name: zoom-out;
-        will-change: transform, opacity;
-        
+
         &-radial {
-            will-change: transform, opacity, border-radius;
+            @extend %zoom-out-radial;
             animation-name: zoom-out-radial;
-            border-radius:0;
         }
     }
 }

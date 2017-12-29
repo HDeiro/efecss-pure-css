@@ -1,0 +1,56 @@
+{
+  "name": "effecss-pure-css",
+  "version": "1.0.2",
+  "description": "An pure css animation framework",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efecss/effecss-pure-css.git"
+  },
+  "keywords": [
+    "animation",
+    "sass",
+    "css"
+  ],
+  "author": {
+    "name": "Hugo Deiró",
+    "email": "hugodeiro@gmail.com",
+    "url": "hdeiro.github.io"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efecss/effecss-pure-css/issues"
+  },
+  "homepage": "https://github.com/efecss/effecss-pure-css#readme",
+  "gitHead": "0c17bd36d6c48d9ecc43a34e44abef97ccbdbcea",
+  "_id": "effecss-pure-css@1.0.1",
+  "_shasum": "61f93348a6d67ce337a173f3ae8d1f4b2cff4165",
+  "_from": "effecss-pure-css@latest",
+  "_npmVersion": "3.10.8",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {
+    "name": "hdeiro",
+    "email": "hugodeiro@gmail.com"
+  },
+  "dist": {
+    "shasum": "61f93348a6d67ce337a173f3ae8d1f4b2cff4165",
+    "tarball": "https://registry.npmjs.org/effecss-pure-css/-/effecss-pure-css-1.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "hdeiro",
+      "email": "hugodeiro@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/effecss-pure-css-1.0.1.tgz_1484453913138_0.04557484807446599"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/effecss-pure-css/-/effecss-pure-css-1.0.1.tgz"
+}
