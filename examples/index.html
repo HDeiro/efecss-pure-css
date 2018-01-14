@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>effecss examples</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <!-- efecss de facto -->
+    <link href="../efecss.min.css" rel="stylesheet" /> 
+  </head>
+  <body>
+    <div class="brand">efecss pure css</div>
+    <div class="container">
+      <div id="target" class="rounded-rectangle"> 
+      </div>
+      Slide
+      <div id="select-group">
+      <select id="1" onchange="addClass(1)">
+        <option></option>
+        <option value="slide-up-in">
+          Slide Up In
+        </option>
+        <option value="slide-up-out">
+          Slide Up Out
+        </option>
+        <option value="slide-down-in">
+          Slide Down In
+        </option>
+        <option value="slide-down-out">
+          Slide Down Out
+        </option>
+        <option value="slide-left-in">
+          Slide Left In
+        </option>
+        <option value="slide-left-out">
+          Slide Left Out
+        </option>
+        <option value="slide-right-in">
+          Slide Right In
+        </option>
+        <option value="slide-right-out">
+          Slide Right Out
+        </option>
+      </select>
+      Fade
+      <select id="2" onchange="addClass(2)">
+        <option></option>
+        <option value="fade-in">
+          Fade In
+        </option>
+        <option value="fade-out">
+          Fade Out
+        </option>
+      </select>
+      Zoom & Pulse
+      <select id="3" onchange="addClass(3)">
+        <option></option>
+        <option value="zoom-in">
+          Zoom In
+        </option>
+        <option value="zoom-in-radial">
+          Zoom In Radial
+        </option>
+        <option value="zoom-out">
+          Zoom Out
+        </option>
+        <option value="zoom-out-radial">
+          Zoom Out Radial
+        </option>
+        <option value="pulse">
+          Pulse
+        </option>
+      </select>
+        Flip & Bounce
+      <select id="4" onchange="addClass(4)">
+        <option></option>
+        <option value="flip-top-in">
+          Flip Top In
+        </option>
+        <option value="flip-top-out">
+          Flip Top Out
+        </option>
+        <option value="flip-bottom-in">
+          Flip Bottom In
+        </option>
+        <option value="flip-bottom-out">
+          Flip Bottom Out
+        </option>
+        <option value="flip-left-in">
+          Flip Left In
+        </option>
+        <option value="flip-left-out">
+          Flip Left Out
+        </option>
+        <option value="flip-right-in">
+          Flip Right In
+        </option>
+        <option value="flip-right-out">
+          Flip Right Out
+        </option>
+        <option value="bounce-top-in">
+          Bounce Top In
+        </option>
+      </select>
+      <label>
+        <input onclick="addClass(5)" value="forever" id="5" type="checkbox" />
+        Forever
+      </label>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
